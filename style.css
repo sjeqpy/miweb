@@ -212,3 +212,59 @@ footer {
     width: 35px;
     height: 35px;
 }
+/* --- Nuevos Estilos para Perfil con Foto Pequeña --- */
+
+/* Contenedor principal del perfil (reemplaza el anterior .about-content) */
+.about-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la foto y el texto */
+    gap: 2rem; /* Espacio entre la foto y el texto */
+    max-width: 900px; /* Un poco más ancho para acomodar la foto al lado */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Wrapper para controlar el tamaño y forma de la foto */
+.about-photo-wrapper {
+    flex: 0 0 150px; /* La foto tendrá un ancho fijo de 150px y no se encogerá */
+    text-align: center;
+}
+
+/* La imagen en sí */
+.about-photo-small {
+    width: 100%; /* Ocupa todo el wrapper (150px) */
+    height: 150px; /* Altura igual al ancho para que sea cuadrada */
+    border-radius: 50%; /* Hace la foto circular */
+    object-fit: cover; /* Asegura que la foto no se estire */
+    border: 4px solid #f8f9fa; /* Borde sutil */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Contenedor del texto (se ajusta automáticamente) */
+.about-text {
+    flex: 1;
+}
+
+/* Ajuste Responsive para celulares */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Apila foto sobre texto en pantallas pequeñas */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .about-photo-wrapper {
+        flex: 0 0 120px; /* Foto un poco más pequeña en celular */
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about-photo-small {
+        height: 120px;
+    }
+
+    .about-content ul {
+        text-align: left; /* Mantiene la lista alineada a la izquierda */
+        display: inline-block; /* Pero centrada como bloque */
+    }
+}
