@@ -213,11 +213,11 @@ footer {
     height: 35px;
 }
 /* --- Sección El Valor Diferencial --- */
+/* --- Sección El Valor Diferencial --- */
 .about {
     padding: 4rem 2rem;
     background-color: #ffffff;
 }
-
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -225,7 +225,6 @@ footer {
     align-items: center;
     gap: 3.5rem;
 }
-
 /* Marco circular de la foto con doble borde */
 .profile-frame {
     position: relative;
@@ -238,8 +237,8 @@ footer {
     outline: 2px solid #e0f2fe;
     outline-offset: 4px;
     background: #ffffff;
+    box-sizing: border-box;
 }
-
 .profile-img {
     width: 100%;
     height: 100%;
@@ -247,9 +246,9 @@ footer {
     object-fit: cover;
     display: block;
 }
-
 /* Insignias flotantes (badges) */
 .badge {
+    box-sizing: border-box;
     position: absolute;
     width: 38px;
     height: 38px;
@@ -262,47 +261,39 @@ footer {
     font-size: 1.1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
-
 .badge-top {
     top: 10px;
     right: 15px;
 }
-
 .badge-left {
     bottom: 30px;
     left: -5px;
 }
-
 .badge-right {
     bottom: 30px;
     right: -5px;
 }
-
 /* Tipografía y estructura del texto */
 .about-content {
     flex: 1;
 }
-
 .about-content h2 {
     font-size: 2.2rem;
     color: #0f172a;
     margin-bottom: 1.2rem;
     text-align: left;
 }
-
 .about-lead {
     font-size: 1.05rem;
     color: #334155;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
-
 .about-list {
     list-style: none;
     padding: 0;
     margin-bottom: 1.8rem;
 }
-
 .about-list li {
     position: relative;
     padding-left: 1.5rem;
@@ -310,7 +301,6 @@ footer {
     color: #334155;
     line-height: 1.5;
 }
-
 .about-list li::before {
     content: "•";
     position: absolute;
@@ -320,22 +310,18 @@ footer {
     line-height: 1;
     top: 2px;
 }
-
 .cacpy-footer {
     font-size: 0.95rem;
     color: #475569;
 }
-
 .cacpy-footer a {
     color: #0284c7;
     font-weight: 600;
     text-decoration: none;
 }
-
 .cacpy-footer a:hover {
     text-decoration: underline;
 }
-
 /* Adaptación para pantallas de celulares */
 @media screen and (max-width: 820px) {
     .about-container {
@@ -343,15 +329,12 @@ footer {
         text-align: center;
         gap: 2rem;
     }
-
     .about-content h2 {
         text-align: center;
     }
-
     .about-list li {
         text-align: left;
     }
-
     .profile-frame {
         width: 210px;
         height: 210px;
