@@ -246,12 +246,15 @@ footer {
 }
 
 /* Ajuste Responsive para celulares */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Apila foto sobre texto en pantallas pequeñas */
-        text-align: center;
-        gap: 1.5rem;
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
     }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
 
     .about-photo-wrapper {
         flex: 0 0 120px; /* Foto un poco más pequeña en celular */
