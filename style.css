@@ -212,62 +212,148 @@ footer {
     width: 35px;
     height: 35px;
 }
-/* --- Nuevos Estilos para Perfil con Foto Pequeña --- */
+/* --- Sección El Valor Diferencial --- */
+.about {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
 
-/* Contenedor principal del perfil (reemplaza el anterior .about-content) */
 .about-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la foto y el texto */
-    gap: 2rem; /* Espacio entre la foto y el texto */
-    max-width: 900px; /* Un poco más ancho para acomodar la foto al lado */
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
 }
 
-/* Wrapper para controlar el tamaño y forma de la foto */
-.about-photo-wrapper {
-    flex: 0 0 150px; /* La foto tendrá un ancho fijo de 150px y no se encogerá */
-    text-align: center;
+/* Marco circular de la foto con doble borde */
+.profile-frame {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 8px;
+    border: 3px solid #bfdbfe;
+    outline: 2px solid #e0f2fe;
+    outline-offset: 4px;
+    background: #ffffff;
 }
 
-/* La imagen en sí */
-.about-photo-small {
-    width: 100%; /* Ocupa todo el wrapper (150px) */
-    height: 150px; /* Altura igual al ancho para que sea cuadrada */
-    border-radius: 50%; /* Hace la foto circular */
-    object-fit: cover; /* Asegura que la foto no se estire */
-    border: 4px solid #f8f9fa; /* Borde sutil */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Contenedor del texto (se ajusta automáticamente) */
-.about-text {
+/* Insignias flotantes (badges) */
+.badge {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-color: #f0f9ff;
+    border: 2px solid #bae6fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.badge-top {
+    top: 10px;
+    right: 15px;
+}
+
+.badge-left {
+    bottom: 30px;
+    left: -5px;
+}
+
+.badge-right {
+    bottom: 30px;
+    right: -5px;
+}
+
+/* Tipografía y estructura del texto */
+.about-content {
     flex: 1;
 }
 
-/* Ajuste Responsive para celulares */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+.about-content h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 1.2rem;
+    text-align: left;
 }
 
-    .about-photo-wrapper {
-        flex: 0 0 120px; /* Foto un poco más pequeña en celular */
-        width: 120px;
-        height: 120px;
-    }
-    
-    .about-photo-small {
-        height: 120px;
+.about-lead {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.8rem;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.about-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0f172a;
+    font-size: 1.3rem;
+    line-height: 1;
+    top: 2px;
+}
+
+.cacpy-footer {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.cacpy-footer a {
+    color: #0284c7;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cacpy-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación para pantallas de celulares */
+@media screen and (max-width: 820px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
     }
 
-    .about-content ul {
-        text-align: left; /* Mantiene la lista alineada a la izquierda */
-        display: inline-block; /* Pero centrada como bloque */
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .about-list li {
+        text-align: left;
+    }
+
+    .profile-frame {
+        width: 210px;
+        height: 210px;
     }
 }
